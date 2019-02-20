@@ -19,10 +19,11 @@ class School
   end 
   
   def sort
-    roster.collect do |grade_level, students|
-      students.sort
+    sorted_roster = {}
+    roster.each do |grade_level, students|
+      sorted_roster[grade_level] = students.sort 
     end 
-    roster
+    sorted_roster
   end 
 
 end 
